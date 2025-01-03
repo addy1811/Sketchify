@@ -1,0 +1,173 @@
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Ensure video background is at the lowest z-index */
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark filter */
+    z-index: 1; /* Overlay sits above the video */
+  }
+  
+  /* Webcam Container */
+  .webcam-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10; /* Ensure the webcam container appears above all content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Slide Panel */
+  .slide-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    height: 100%;
+    background: url('../assets/Graphic-Design.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the background image covers the panel */
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Keep slide panel above the background but below webcam */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .slide-panel.open {
+    right: 0;
+  }
+  
+  .slide-panel img {
+    position: absolute;
+    z-index: 1;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5); /* Darker button for better visibility */
+    padding: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    color: white; /* White color for better contrast */
+  }
+  
+  /* Content Box */
+  .content-box {
+    background-image: url('../assets/hex.jpg'); /* Background image */
+
+    background-size: cover; /* Ensures the background image covers the entire box */
+    background-position: center; /* Centers the background image */
+    padding: 2rem; /* Padding around the content */
+    border-radius: 1rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 28rem; /* Max width of the content box */
+    width: 100%; /* Ensures it is responsive */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Keep content above background video but below slide panel */
+  }
+  
+  /* File Info Container */
+  .file-info-container {
+    background-image: url('../assets/hex.jpg'); /* Background image */
+    background-color: rgba(0, 0, 0, 0.1); /* Fallback color */
+    background-size: cover; /* Ensures background image covers the entire container */
+    background-position: center; /* Centers the background image */
+    padding: 1rem; /* Padding around the content */
+    border-radius: 0.5rem; /* Rounded corners */
+    display: flex; /* Flexbox properties */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Adds space between items */
+    margin-bottom: 1rem; /* Margin at the bottom */
+    z-index: 2; /* Ensure file info container appears above the background */
+  }
+  
+  /* Additional Styling for Buttons and Inputs */
+  button, input[type="file"] {
+    cursor: pointer;
+  }
+  
+  button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight hover effect */
+  }
+  
+  label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  label:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="file"] {
+    display: none; /* Hide the default file input */
+  }
+  .download-btn {
+    position: absolute;
+    top: 16px; /* Adjust as needed */
+    right: 16px; /* Adjust as needed */
+    color: white; /* White color for visibility */
+    font-size: 1.5rem; /* Adjust size as needed */
+    z-index: 1001; /* Ensure it is above other content */
+    background: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
+    padding: 10px;
+    border-radius: 50%; /* Round button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Indicate it is clickable */
+  }
+  
+  .download-btn:hover {
+    background: rgba(0, 0, 0, 0.7); /* Darker on hover */
+  }
+  
+  /* In your App.css */
+  .navbar {
+    position: relative;
+    z-index: 1000; /* Ensure it's above the video background */
+  }
+  

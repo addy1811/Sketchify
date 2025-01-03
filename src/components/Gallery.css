@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-size: cover; /* Make sure it covers the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* Gallery container with background image */
+.gallery-container {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px; /* Adjusted for the fixed header */
+  background-color: #f1d3b0; /* Optional: Add a semi-transparent overlay for contrast */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+.logo-container {
+  margin-left: 20px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.auth-button {
+  margin-left: 15px;
+  padding: 12px 25px; /* Increased padding for a more pronounced oval shape */
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 30px; /* Makes the button oval */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+/* Gallery styling */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 12px; /* Space between images */
+  padding: 20px;
+  max-width: 80%; /* Limit the width */
+  margin-top: 80px; /* Space below the fixed header */
+}
+
+.image-box {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover .gallery-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Arrow Navigation */
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  margin: 0 15px;
+}
+
+.arrow-button:hover {
+  background-color: #0056b3;
+}
+
+.arrow-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Pagination controls styling */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-controls span {
+  font-size: 16px;
+}
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+  transition: transform 0.1s ease-out;
+}
