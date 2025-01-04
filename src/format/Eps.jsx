@@ -14,9 +14,17 @@ const Eps = () => {
   const webcamRef = useRef(null);
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile.type !== "image/eps") {
+        alert("Only EPS files are supported. Please upload a valid EPS image.");
+        e.target.value = ""; // Clear the file input
+        return;
+      }
+      setFile(selectedFile); // Set the valid PNG file
+    }
   };
-
+  
   const handleDelete = () => {
     setFile(null);
     setSketchUrl(null);

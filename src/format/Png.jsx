@@ -12,10 +12,19 @@ const Png = () => {
   const [showWebcam, setShowWebcam] = useState(false); // State to show/hide webcam
 
   const webcamRef = useRef(null);
-
+  
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile.type !== "image/png") {
+        alert("Only PNG files are supported. Please upload a valid PNG image.");
+        e.target.value = ""; // Clear the file input
+        return;
+      }
+      setFile(selectedFile); // Set the valid PNG file
+    }
   };
+  
 
   const handleDelete = () => {
     setFile(null);

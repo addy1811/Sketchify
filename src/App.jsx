@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './format/Home';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Jpeg from './format/Jpeg';
 import Png from './format/Png';
-import Eps from './format/eps';
+import Eps from './format/Eps';
 import Gif from './format/Gif';
 import Tiff from './format/Tiff';
 import Psd from './format/Psd';
@@ -15,26 +14,28 @@ import Gallery from './components/Gallery';
 import SignUp from './Loginup/SignUp';
 import SignIn from './Loginup/SignIn';
 
-
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Sketchify">
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* Redirect the root path to /jpeg */}
+          <Route path="/" element={<Navigate to="/jpeg" />} />
+          
+          {/* Other routes */}
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/jpeg" element={<Jpeg />} />
           <Route path="/png" element={<Png />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/signin' element={<SignIn />} />
-          <Route path='/eps' element={<Eps />} />
-          <Route path='/gif' element={<Gif />} />
-          <Route path='/tiff' element={<Tiff />} />
-          <Route path='/psd' element={<Psd />} />
-          <Route path='/pdf' element={<Pdf />} />
-          <Route path='/ai' element={<Ai />} />
-          <Route path='/indd' element={<Indd />} />
-          <Route path='/raw' element={<Raw />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/eps" element={<Eps />} />
+          <Route path="/gif" element={<Gif />} />
+          <Route path="/tiff" element={<Tiff />} />
+          <Route path="/psd" element={<Psd />} />
+          <Route path="/pdf" element={<Pdf />} />
+          <Route path="/ai" element={<Ai />} />
+          <Route path="/indd" element={<Indd />} />
+          <Route path="/raw" element={<Raw />} />
         </Routes>
       </div>
     </Router>

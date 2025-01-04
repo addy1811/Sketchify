@@ -14,8 +14,17 @@ const Pdf = () => {
   const webcamRef = useRef(null);
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile.type !== "image/pdf") {
+        alert("Only PDF files are supported. Please upload a valid PDF image.");
+        e.target.value = ""; // Clear the file input
+        return;
+      }
+      setFile(selectedFile); // Set the valid PNG file
+    }
   };
+  
 
   const handleDelete = () => {
     setFile(null);
