@@ -14,34 +14,34 @@ const NavBar = () => {
       {/* Navigation Links */}
       <ul className="nav-list">
         <li className="nav-item">
-        <a href="/Sketchify/jpeg" className="nav-link">JPEG</a>
+          <a href="https://addy1811.github.io/Sketchify/jpeg" className="nav-link">JPEG</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/png" className="nav-link">PNG</a>
+          <a href="https://addy1811.github.io/Sketchify/png" className="nav-link">PNG</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/gif" className="nav-link">GIF</a>
+          <a href="https://addy1811.github.io/Sketchify/gif" className="nav-link">GIF</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/tiff" className="nav-link">TIFF</a>
+          <a href="https://addy1811.github.io/Sketchify/tiff" className="nav-link">TIFF</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/psd" className="nav-link">PSD</a>
+          <a href="https://addy1811.github.io/Sketchify/psd" className="nav-link">PSD</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/pdf" className="nav-link">PDF</a>
+          <a href="https://addy1811.github.io/Sketchify/pdf" className="nav-link">PDF</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/eps" className="nav-link">EPS</a>
+          <a href="https://addy1811.github.io/Sketchify/eps" className="nav-link">EPS</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/ai" className="nav-link">AI</a>
+          <a href="https://addy1811.github.io/Sketchify/ai" className="nav-link">AI</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/indd" className="nav-link">INDD</a>
+          <a href="https://addy1811.github.io/Sketchify/indd" className="nav-link">INDD</a>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/raw" className="nav-link">RAW</a>
+          <a href="https://addy1811.github.io/Sketchify/raw" className="nav-link">RAW</a>
         </li>
       </ul>
     </nav>
