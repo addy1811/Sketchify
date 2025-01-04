@@ -13,9 +13,18 @@ const Indd = () => {
 
   const webcamRef = useRef(null);
 
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile.type !== "image/indd") {
+        alert("Only INDD files are supported. Please upload a valid INDD image.");
+        e.target.value = ""; // Clear the file input
+        return;
+      }
+      setFile(selectedFile); // Set the valid  file
+    }
   };
+  
 
   const handleDelete = () => {
     setFile(null);
