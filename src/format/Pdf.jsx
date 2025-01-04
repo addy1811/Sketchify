@@ -22,7 +22,7 @@ const Pdf = () => {
         e.target.value = ""; // Clear the file input
         return;
       }
-      setFile(selectedFile); // Set the valid PNG file
+      setFile(selectedFile); // Set the valid  file
     }
   };
   
