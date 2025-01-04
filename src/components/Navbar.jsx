@@ -14,34 +14,34 @@ const NavBar = () => {
       {/* Navigation Links */}
       <ul className="nav-list">
         <li className="nav-item">
-          <a href="/jpeg" className="nav-link">JPEG</a>
+        <a href="/Sketchify/jpeg" className="nav-link">JPEG</a>
         </li>
         <li className="nav-item">
-          <a href="/png" className="nav-link">PNG</a>
+          <a href="/Sketchify/png" className="nav-link">PNG</a>
         </li>
         <li className="nav-item">
-          <a href="/gif" className="nav-link">GIF</a>
+          <a href="/Sketchify/gif" className="nav-link">GIF</a>
         </li>
         <li className="nav-item">
-          <a href="/tiff" className="nav-link">TIFF</a>
+          <a href="/Sketchify/tiff" className="nav-link">TIFF</a>
         </li>
         <li className="nav-item">
-          <a href="/psd" className="nav-link">PSD</a>
+          <a href="/Sketchify/psd" className="nav-link">PSD</a>
         </li>
         <li className="nav-item">
-          <a href="/pdf" className="nav-link">PDF</a>
+          <a href="/Sketchify/pdf" className="nav-link">PDF</a>
         </li>
         <li className="nav-item">
-          <a href="/eps" className="nav-link">EPS</a>
+          <a href="/Sketchify/eps" className="nav-link">EPS</a>
         </li>
         <li className="nav-item">
-          <a href="/ai" className="nav-link">AI</a>
+          <a href="/Sketchify/ai" className="nav-link">AI</a>
         </li>
         <li className="nav-item">
-          <a href="/indd" className="nav-link">INDD</a>
+          <a href="/Sketchify/indd" className="nav-link">INDD</a>
         </li>
         <li className="nav-item">
-          <a href="/raw" className="nav-link">RAW</a>
+          <a href="/Sketchify/raw" className="nav-link">RAW</a>
         </li>
       </ul>
     </nav>
