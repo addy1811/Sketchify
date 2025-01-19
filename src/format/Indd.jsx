@@ -13,7 +13,7 @@ const Indd = () => {
 
   const webcamRef = useRef(null);
 
-  const handleFileChange = (e) => {
+    const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
       if (selectedFile.type !== "image/indd") {

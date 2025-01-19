@@ -13,17 +13,8 @@ const Gif = () => {
 
   const webcamRef = useRef(null);
   const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    if (selectedFile) {
-      if (selectedFile.type !== "image/gif") {
-        alert("Only GIF files are supported. Please upload a valid GIF image.");
-        e.target.value = ""; // Clear the file input
-        return;
-      }
-      setFile(selectedFile); // Set the valid  file
-    }
+    setFile(e.target.files[0]);
   };
-  
 
   const handleDelete = () => {
     setFile(null);

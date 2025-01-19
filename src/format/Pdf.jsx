@@ -13,6 +13,7 @@ const Pdf = () => {
 
   const webcamRef = useRef(null);
 
+
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
@@ -21,7 +22,7 @@ const Pdf = () => {
         e.target.value = ""; // Clear the file input
         return;
       }
-      setFile(selectedFile); // Set the valid PNG file
+      setFile(selectedFile); // Set the valid  file
     }
   };
   

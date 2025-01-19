@@ -25,6 +25,17 @@ const Ai = () => {
     }
   };
   
+const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile.type !== "image/ai") {
+        alert("Only AI files are supported. Please upload a valid AI image.");
+        e.target.value = ""; // Clear the file input
+        return;
+      }
+      setFile(selectedFile); // Set the valid  file
+    }
+  };
 
   const handleDelete = () => {
     setFile(null);
