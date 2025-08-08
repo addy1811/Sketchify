@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css'; 
-
+import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav className="navbar">
@@ -14,34 +14,34 @@ const NavBar = () => {
       {/* Navigation Links */}
       <ul className="nav-list">
         <li className="nav-item">
-        <a href="/Sketchify/jpeg" className="nav-link">JPEG</a>
+        <Link to="/Sketchify/jpeg" className="nav-link">JPEG</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/png" className="nav-link">PNG</a>
+          <Link to="/Sketchify/png" className="nav-link">PNG</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/gif" className="nav-link">GIF</a>
+          <Link to="/Sketchify/gif" className="nav-link">GIF</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/tiff" className="nav-link">TIFF</a>
+          <Link href="/Sketchify/tiff" className="nav-link">TIFF</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/psd" className="nav-link">PSD</a>
+          <Link  to="/Sketchify/psd" className="nav-link">PSD</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/pdf" className="nav-link">PDF</a>
+          <Link to="/Sketchify/pdf" className="nav-link">PDF</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/eps" className="nav-link">EPS</a>
+          <Link to="/Sketchify/eps" className="nav-link">EPS</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/ai" className="nav-link">AI</a>
+          <Link to="/Sketchify/ai" className="nav-link">AI</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/indd" className="nav-link">INDD</a>
+          <Link to="/Sketchify/indd" className="nav-link">INDD</Link>
         </li>
         <li className="nav-item">
-          <a href="/Sketchify/raw" className="nav-link">RAW</a>
+          <Link to="/Sketchify/raw" className="nav-link">RAW</Link>
         </li>
       </ul>
     </nav>
