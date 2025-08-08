@@ -14,19 +14,19 @@ const NavBar = () => {
       {/* Navigation Links */}
       <ul className="nav-list">
         <li className="nav-item">
-        <Link to="/Sketchify/jpeg" className="nav-link">JPEG</Link>
+        <Link to="/jpeg" className="nav-link">JPEG</Link>
         </li>
         <li className="nav-item">
-          <Link to="/Sketchify/png" className="nav-link">PNG</Link>
+          <Link to="/png" className="nav-link">PNG</Link>
         </li>
         <li className="nav-item">
-          <Link to="/Sketchify/gif" className="nav-link">GIF</Link>
+          <Link to="/gif" className="nav-link">GIF</Link>
         </li>
         <li className="nav-item">
-          <Link href="/Sketchify/tiff" className="nav-link">TIFF</Link>
+          <Link href="/tiff" className="nav-link">TIFF</Link>
         </li>
         <li className="nav-item">
-          <Link  to="/Sketchify/psd" className="nav-link">PSD</Link>
+          <Link  to="/psd" className="nav-link">PSD</Link>
         </li>
         <li className="nav-item">
           <Link to="/Sketchify/pdf" className="nav-link">PDF</Link>
