@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {  HashRouter  as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Jpeg from './format/Jpeg';
 import Png from './format/Png';
 import Eps from './format/Eps';
@@ -16,7 +16,7 @@ import SignIn from './Loginup/SignIn';
 
 const App = () => {
   return (
-    <Router basename="/Sketchify">
+    <Router>
       <div className="App">
         <Routes>
           {/* Redirect the root path to /jpeg */}
